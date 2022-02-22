@@ -78,6 +78,8 @@ function setup() {
   button.position(200,320);
   button.size(50,50);
 
+  button.mouseClicked(drop2);
+
   button2 = createImg('cut_btn.png');
   button2.position(30,420);
   button2.size(50,50);
@@ -107,7 +109,7 @@ function draw()
 
   if(collide(fruit,bunny,80)==true)
   {
-   remove_rope();
+   //remove_rope();
    bubble.visible = false;
     World.remove(engine.world,fruit);
     fruit = null;
@@ -133,7 +135,7 @@ function drop()
   con2 = null; 
 }
 
-function remove_rope()
+function drop2()
 {
   rope.break();
   con.dettach();
